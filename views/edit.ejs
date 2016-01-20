@@ -1,0 +1,15 @@
+<%- include header %>
+	<form method="post">
+		标题：<br/>
+		<input type="text" name="title" value="<%= post.title %>" disabled="disabled" />
+		标签：<br/>
+        <input type="text" name="tag1" value="<%= post.tags[0] %>" disabled="disabled" />
+        <input type="text" name="tag2" value="<%= post.tags[1] %>" disabled="disabled" />
+        <input type="text" name="tag3" value="<%= post.tags[3] %>" disabled="disabled" />
+		正文：<br/>
+		<textarea name="post" cols="100" rows="20">
+			<%= post.post %>
+		</textarea><br/>
+		<input type="submit" value="保存修改" />
+	</form>
+<%- include footer %>
