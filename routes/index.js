@@ -215,16 +215,8 @@ module.exports = function (app) {
         var page = req.query.p ? parseInt(req.query.p) : 1;
         //检查用户是否存在
         User.get(req.params.name, function (err, user) {
-            if (err) {
-                req.flash('error', err);
-                return res.redirect('/');
-            }
-            if (!user) {
-                req.flash('error', '用户不存在!');
-                return res.redirect('/');
-            }
-            //查询并返回该用户第 page 页的 10 篇文章
-            Post.getTen(user.name, page, function (err, posts, total) {
+            //查询并返回该用户第page页的10篇文章
+            Post.getTen(user.name, function (err, posts, total) {
                 if (err) {
                     req.flash('error', err);
                     return res.redirect('/');
