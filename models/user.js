@@ -45,6 +45,7 @@ User.prototype.save = function (callback) {
             });
         });
     });
+
 };
 
 //读取用户信息
