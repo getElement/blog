@@ -36,7 +36,9 @@
     <br><a href="/u/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.day %>/<%= post.reprint_info.reprint_from.title %>">原文链接</a>
     <% } %>
 </p>
-<p><%- post.post %></p>
-<p class="info">阅读：<%= post.pv %></p>
+<div class="msg">
+    <p><%- post.post %></p>
+</div>
+<p class="read">阅读：<%= post.pv %></p>
 <%- include comment %>
 <%- include footer %>

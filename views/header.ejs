@@ -13,22 +13,22 @@
             });
         </script>
     </head>
-    <body>
+    <body class="clear">
+    <div class="wrap">
     <header>
         <h1><%= title %></h1>
     </header>
     <nav>
-        <span><a title="主页" href="/">主页</a></span>
-        <span><a title="存档" href="/archive">存档</a> </span>
-        <span><a title="标签" href="/tags">标签</a></span>
+        <span><a title="主页" href="/">博客主页</a></span>
+        <span><a title="存档" href="/archive">博客存档</a> </span>
+        <span><a title="标签" href="/tags">个性标签</a></span>
         <span><a title="友情链接" href="/links">友情链接</a></span>
         <% if (user) { %>
-        <span><a title="上传" href="./upload">上传</a></span>
-        <span><a title="发表" href="./post">发布</a></span>
-        <span><a title="登出" href="./logout">登出</a></span>
+        <span><a title="发表" href="./post">发布文章</a></span>
+        <span><a title="登出" href="./logout">登出博客</a></span>
         <% } else { %>
-        <span><a title="登录" href="./login">登录</a></span>
-        <span><a title="注册" href="./reg">注册</a></span>
+        <span><a title="登录" href="./login">登录博客</a></span>
+        <span><a title="注册" href="./reg">注册博客</a></span>
         <% } %>
         <span>
             <form action="/search" method="get">
