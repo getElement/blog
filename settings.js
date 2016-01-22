@@ -1,5 +1,5 @@
 module.exports = {
     cookieSecret: 'myblog',
-    url: 'mongodb://admin:ycs1352667433@ds045795.mongolab.com:45795/blog'
+    url: 'mongodb://xiaoyu7:735467@ds045795.mongolab.com:45795/blog'
 };
 
