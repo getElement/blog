@@ -39,6 +39,14 @@
 <div class="msg">
     <p><%- post.post %></p>
 </div>
-<p class="read">阅读：<%= post.pv %></p>
+<p class="read">
+    阅读：<%= post.pv %> |
+    转载：
+    <% if (post.reprint_info.reprint_to) { %>
+    <%= post.reprint_info.reprint_to.length %>
+    <% } else { %>
+    <%= 0 %>
+    <% } %>
+</p>
 <%- include comment %>
 <%- include footer %>

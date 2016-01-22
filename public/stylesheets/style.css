@@ -287,3 +287,23 @@ p span:first-of-type .edit{
 .imgLink:hover {
     border: 1px solid #ed9c28;
 }
+
+.form-info {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    width: 300px;
+    text-align: right;
+}
+
+.form-control{
+    margin-left: 20px;
+}
+
+.form-control input:hover {
+    background: #7F929C;
+    color: #fff;
+}

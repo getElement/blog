@@ -1,9 +1,34 @@
 <%-include header %>
-<form method="post">
-	用户名: <input type="text" name="name" /><br/>
-	密码:	<input type="password" name="password" /><br/>
-	确认密码:<input type="password" name="password-repeat" /><br/>
-	邮箱:	<input type="email" name="email" /><br/>
-	<input type="submit" value="注册" />
+<form method="post" id="register" onSubmit="return check();">
+	<div class="form-group">
+		用户名: <input class="form-info" type="text" name="name" />
+	</div>
+	<div class="form-group">
+		登录密码:<input class="form-info" type="password" name="password" />
+	</div>
+	<div class="form-group">
+        确认密码:<input class="form-info" type="password" name="password-repeat" />
+	</div>
+	<div class="form-group">
+        个人邮箱:<input class="form-info" type="email" name="email" />
+    </div>
+    <div class="form-control">
+        <input id="reg1" type="submit" value="注册" />
+    </div>
 </form>
+<script>
+    var oRegister = document.getElementById('register');
+    var oInput = oRegister.getElementsByTagName('input');
+    var oReg1 = document.getElementById('reg1');
+
+    function check(){
+        for (var i = 0; i < oInput.length; i++) {
+            if (oInput[i].value != '') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+</script>
 <%-include footer %>
