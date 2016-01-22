@@ -152,6 +152,9 @@ article a:hover {
 	color: #333;
 	text-decoration: underline;
 }
+.article-detail {
+    padding: 0 15px;
+}
 
 .section {
     border: 1px solid #eee;
