@@ -1,5 +1,5 @@
 <%-include header %>
-<form method="post" id="register" onSubmit="return check();">
+<form method="post" id="register">
 	<div class="form-group">
 		用户名: <input class="form-info" type="text" name="name" />
 	</div>
@@ -16,19 +16,4 @@
         <input id="reg1" type="submit" value="注册" />
     </div>
 </form>
-<script>
-    var oRegister = document.getElementById('register');
-    var oInput = oRegister.getElementsByTagName('input');
-    var oReg1 = document.getElementById('reg1');
-
-    function check(){
-        for (var i = 0; i < oInput.length; i++) {
-            if (oInput[i].value != '') {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }
-</script>
 <%-include footer %>
